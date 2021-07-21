@@ -8,7 +8,18 @@ red - #ee5253
 
 */
 
-
+header {
+  font:
+  /* line-height: */ normal
+  /* font-weight: */ bold
+  /* font-stretch: */ normal
+  /* font-variant: */ normal
+  /* font-size:*/ 21px
+  /* font-family: */ 'Roboto', sans-serif;
+  /* font-weight: bold; */
+  background: #0fb9b1;
+  padding: .4em 1.75em;
+}
 
 body {
   background:
@@ -20,6 +31,7 @@ body {
     border-box /* clip */
     /* color */
     ;
+  margin: auto;
 }
 
 /* .background-container {
