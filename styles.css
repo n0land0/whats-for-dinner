@@ -24,7 +24,20 @@ header {
   /* font-family: */ 'Roboto', sans-serif;
   /* font-weight: bold; */
   background: #0fb9b1;
-  padding: .25em 1.75em .25em 2em;
+  padding: .25em 2em .25em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-a-recipe-container {
+}
+
+.add-a-recipe {
+  border: none;
+  border-radius: .5em;
+  font-size: 1.3em;
+  padding: .75em .75em;
 }
 
 /* entire body */
@@ -52,13 +65,14 @@ body {
 /* both divs */
 .meal-select,
 .cookpot-container {
-  display: flex;
+  /* display: flex; */
   background: rgba(225, 225, 225, .9);
-  width: 42.5%;
+  width: 35%;
   padding-bottom: 34.25%;
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 3em;
 }
 
 /* meal select div */
@@ -66,7 +80,6 @@ body {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: 3em;
 }
 
 .looking-for {
