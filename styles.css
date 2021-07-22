@@ -14,11 +14,11 @@ header {
   /* font-weight: */ bold
   /* font-stretch: */ normal
   /* font-variant: */ normal
-  /* font-size:*/ 21px
+  /* font-size:*/ 20px
   /* font-family: */ 'Roboto', sans-serif;
   /* font-weight: bold; */
   background: #0fb9b1;
-  padding: .4em 1.75em;
+  padding: .25em 1.75em .25em 2em;
 }
 
 body {
@@ -32,8 +32,26 @@ body {
     /* color */
     ;
   margin: auto;
+  height: 100%;
 }
 
-/* .background-container {
+.box-container {
   display: flex;
+  justify-content: space-around;
+  padding: 3.5%;
+}
+
+.meal-select,
+.cookpot {
+  background: rgba(225, 225, 225, .9);
+  width: 37.5%;
+  padding-bottom: 30%;
+  /* justify-content: space-between; */
+  /* position: relative; */
+}
+
+/* .meal-select {}
+
+.cookpot {
+  /* order: 1; */
 } */
