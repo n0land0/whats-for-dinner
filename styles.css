@@ -52,7 +52,9 @@ body {
   /* position: relative; */
 }
 
-.meal-select {}
+.meal-select {
+  flex-direction: column;
+}
 
 .cookpot-container {
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
