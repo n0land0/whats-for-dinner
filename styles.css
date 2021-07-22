@@ -42,18 +42,36 @@ body {
 }
 
 .meal-select,
-.cookpot {
+.cookpot-container {
+  display: flex;
   background: rgba(225, 225, 225, .9);
-  width: 43%;
+  width: 42.5%;
   padding-bottom: 34%;
-  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
   /* position: relative; */
 }
 
-.meal-select {
+.meal-select {}
 
+.cookpot-container {
+  background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
+  50% 50% / 12em /* position / size */
+  no-repeat /* repeat */
+  local /* attachment */
+  border-box /* origin */
+  border-box /* clip */
+  rgba(225, 225, 225, .9)/* color */
+  ;
+  background-repeat: no-repeat;
 }
 
 .cookpot {
-
+  object-fit: none;
+  /* padding: 10em 10em 10em 10em; */
 }
+
+/* .cookpot {
+  margin: auto;
+  object-fit: none;
+} */
