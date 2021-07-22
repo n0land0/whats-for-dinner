@@ -102,6 +102,11 @@ li {
   margin: .75em 0 .75em 0;
 }
 
+input[type="radio"] {
+  width: 1.5em;
+  height: 1.5em;
+}
+
 .lets-cook {
   background-color: #0fb9b1;
   border: none;
