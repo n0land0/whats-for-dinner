@@ -54,6 +54,12 @@ body {
 
 .meal-select {
   flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .cookpot-container {
