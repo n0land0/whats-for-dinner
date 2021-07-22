@@ -20,11 +20,11 @@ header {
   /* font-weight: */ bold
   /* font-stretch: */ normal
   /* font-variant: */ normal
-  /* font-size:*/ .8em
+  /* font-size:*/ .825em
   /* font-family: */ 'Roboto', sans-serif;
   /* font-weight: bold; */
   background: #0fb9b1;
-  padding: .25em 2em .25em 2em;
+  padding: .25em 2em .25em 2.2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,9 +35,9 @@ header {
 
 .add-a-recipe {
   border: none;
-  border-radius: .5em;
+  border-radius: .4em;
   font-size: 1.3em;
-  padding: .75em .75em;
+  padding: .65em .7em;
 }
 
 /* entire body */
@@ -68,11 +68,11 @@ body {
   /* display: flex; */
   background: rgba(225, 225, 225, .9);
   width: 35%;
-  padding-bottom: 34.25%;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 3em;
+  /* padding-bottom: 34.25%; */
+  padding: 3em 3em 4em 3em;
 }
 
 /* meal select div */
@@ -83,7 +83,7 @@ body {
 }
 
 .looking-for {
-  font-size: 2em;
+  font-size: 2.1em;
 }
 
 .asterisk {
@@ -93,13 +93,13 @@ body {
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0 0 0 .25em;
   align-items: flex-start;
 }
 
 li {
-  font-size: 1.5em;
-  margin: .75em 0 .75em 0;
+  font-size: 1.4em;
+  margin: 1em 0 1em 0;
 }
 
 input[type="radio"] {
@@ -110,15 +110,15 @@ input[type="radio"] {
 .lets-cook {
   background-color: #0fb9b1;
   border: none;
-  border-radius: .5em;
+  border-radius: .35em;
   font-size: 1em;
-  padding: 2% 10%;
+  padding: 2.5% 13.25%;
 }
 
 /* cookpot div */
 .cookpot-container {
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
-  50% 50% / 8em /* position / size */
+  50% 50% / 8.25em /* position / size */
   no-repeat /* repeat */
   local /* attachment */
   border-box /* origin */
