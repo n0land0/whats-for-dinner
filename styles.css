@@ -8,19 +8,26 @@ red - #ee5253
 
 */
 
+/* relative unit for entire page */
+html {
+  font-size: 1vw;
+}
+
+/* header */
 header {
   font:
   /* line-height: */ normal
   /* font-weight: */ bold
   /* font-stretch: */ normal
   /* font-variant: */ normal
-  /* font-size:*/ 20px
+  /* font-size:*/ .8em
   /* font-family: */ 'Roboto', sans-serif;
   /* font-weight: bold; */
   background: #0fb9b1;
   padding: .25em 1.75em .25em 2em;
 }
 
+/* entire body */
 body {
   background:
     url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/burger-friends.jpg)
@@ -33,6 +40,7 @@ body {
     ;
   margin: auto;
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .box-container {
@@ -41,6 +49,7 @@ body {
   padding: 3.5% 8.5% 3.5% 8.5%;
 }
 
+/* both divs */
 .meal-select,
 .cookpot-container {
   display: flex;
@@ -49,22 +58,42 @@ body {
   padding-bottom: 34.25%;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
+  position: relative;
 }
 
+/* meal select div */
 .meal-select {
-  flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em;
+}
+
+.looking-for {
+  font-size: 2em;
+}
+
+.asterisk {
+  color: red;
+  vertical-align: super;
 }
 
 ul {
   list-style-type: none;
 }
 
+.lets-cook {
+  background-color: #0fb9b1;
+  border: none;
+  border-radius: .5em;
+  font-size: 1em;
+  padding: 2% 10%;
+}
+
+/* cookpot div */
 .cookpot-container {
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
-  50% 50% / 12.25em /* position / size */
+  50% 50% / 8em /* position / size */
   no-repeat /* repeat */
   local /* attachment */
   border-box /* origin */
