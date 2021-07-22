@@ -33,7 +33,7 @@ Use [https://gifcap.dev/](https://gifcap.dev/) to make GIFs
 	- Install instructions, how to access the website and how to use the website
 
 ## Contributors
-  - [Hayley Dixon](https://github.com/hheyhhay)
+  - [Nolan Caine](https://github.com/n0land0)
 
 ## Wins
 	- What went well!
