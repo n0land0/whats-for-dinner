@@ -37,21 +37,23 @@ body {
 
 .box-container {
   display: flex;
-  justify-content: space-around;
-  padding: 3.5%;
+  justify-content: space-between;
+  padding: 3.5% 8.5% 3.5% 8.5%;
 }
 
 .meal-select,
 .cookpot {
   background: rgba(225, 225, 225, .9);
-  width: 37.5%;
-  padding-bottom: 30%;
+  width: 43%;
+  padding-bottom: 34%;
   /* justify-content: space-between; */
   /* position: relative; */
 }
 
-/* .meal-select {}
+.meal-select {
+
+}
 
 .cookpot {
-  /* order: 1; */
-} */
+
+}
