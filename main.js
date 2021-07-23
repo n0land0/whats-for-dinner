@@ -29,7 +29,10 @@ function checkRadios(element, array) {
   if (element.checked) {
     // console.log(randomIndex(array));
     cookpot.innerHTML = `
-      ${array[randomIndex(array)]}
+      <div class="random-meal">
+        <h3>You should make:</h3>
+        <p>${array[randomIndex(array)]}</p>
+      </div>
     `;
   }
 }
