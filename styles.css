@@ -145,6 +145,10 @@ label {
   background-repeat: no-repeat;
 }
 
+.hide-background-image { /*hide cookpot*/
+  background-image: none;
+}
+
 .cookpot {
   object-fit: none;
   /* padding: 10em 10em 10em 10em; */
@@ -154,3 +158,8 @@ label {
   margin: auto;
   object-fit: none;
 } */
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
