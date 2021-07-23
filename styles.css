@@ -8,19 +8,39 @@ red - #ee5253
 
 */
 
+/* relative unit for entire page */
+html {
+  font-size: 1vw;
+}
+
+/* header */
 header {
   font:
   /* line-height: */ normal
   /* font-weight: */ bold
   /* font-stretch: */ normal
   /* font-variant: */ normal
-  /* font-size:*/ 20px
+  /* font-size:*/ .825em
   /* font-family: */ 'Roboto', sans-serif;
   /* font-weight: bold; */
   background: #0fb9b1;
-  padding: .25em 1.75em .25em 2em;
+  padding: .25em 2em .25em 2.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.add-a-recipe-container {
+}
+
+.add-a-recipe {
+  border: none;
+  border-radius: .4em;
+  font-size: 1.3em;
+  padding: .65em .7em;
+}
+
+/* entire body */
 body {
   background:
     url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/burger-friends.jpg)
@@ -33,6 +53,7 @@ body {
     ;
   margin: auto;
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .box-container {
@@ -41,22 +62,63 @@ body {
   padding: 3.5% 8.5% 3.5% 8.5%;
 }
 
+/* both divs */
 .meal-select,
 .cookpot-container {
-  display: flex;
+  /* display: flex; */
   background: rgba(225, 225, 225, .9);
-  width: 42.5%;
-  padding-bottom: 34.25%;
+  width: 35%;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
+  position: relative;
+  /* padding-bottom: 34.25%; */
+  padding: 3em 3em 4em 3em;
 }
 
-.meal-select {}
+/* meal select div */
+.meal-select {
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.looking-for {
+  font-size: 2.1em;
+}
+
+.asterisk {
+  color: red;
+  vertical-align: super;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 0 0 .25em;
+  align-items: flex-start;
+}
+
+li {
+  font-size: 1.4em;
+  margin: 1em 0 1em 0;
+}
+
+input[type="radio"] {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.lets-cook {
+  background-color: #0fb9b1;
+  border: none;
+  border-radius: .35em;
+  font-size: 1em;
+  padding: 2.5% 13.25%;
+}
+
+/* cookpot div */
 .cookpot-container {
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
-  50% 50% / 12.25em /* position / size */
+  50% 50% / 8.25em /* position / size */
   no-repeat /* repeat */
   local /* attachment */
   border-box /* origin */
