@@ -22,6 +22,7 @@ function makeMeal() {
   checkRadiosAndSuggest(radioSide, sides);
   checkRadiosAndSuggest(radioMainDish, mains);
   checkRadiosAndSuggest(radioDessert, desserts);
+  checkEntireMealAndSuggest(radioEntireMeal, sides, mains, desserts);
   // checkRadiosAndSuggest(radioEntireMeal, );
 }
 // Check if a certain radio button is selected,
@@ -31,7 +32,18 @@ function checkRadiosAndSuggest(element, array) {
     cookpot.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
-        <p>${array[randomIndex(array)]}</p>
+        <p>${array[randomIndex(array)]}!</p>
+      </div>
+    `;
+  }
+}
+// Sketch out entire Meal
+function checkEntireMealAndSuggest(element, array1, array2, array3) {
+  if (element.checked) {
+    cookpot.innerHTML = `
+      <div class="random-meal">
+        <h3>You should make:</h3>
+        <p>${array2[randomIndex(array2)]} with a side of ${array1[randomIndex(array1)]} and ${array3[randomIndex(array3)]} for dessert!</p>
       </div>
     `;
   }
