@@ -19,15 +19,15 @@ function makeMeal() {
   event.preventDefault(); // stop page reload
   hideImage(cookpot);
   // take input from form radio buttons and access relevant array
-  // if (radioSide.checked) {
-  //   console.log("checked");
-  // }
-  checkRadios(radioSide, sides);
+  checkRadiosAndSuggest(radioSide, sides);
+  checkRadiosAndSuggest(radioMainDish, mains);
+  checkRadiosAndSuggest(radioDessert, desserts);
+  // checkRadiosAndSuggest(radioEntireMeal, );
 }
-// Check if a certain radio button is selected
-function checkRadios(element, array) {
+// Check if a certain radio button is selected,
+// and if so, generate the appropriate div on the right
+function checkRadiosAndSuggest(element, array) {
   if (element.checked) {
-    // console.log(randomIndex(array));
     cookpot.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
