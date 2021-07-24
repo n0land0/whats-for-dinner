@@ -1,7 +1,7 @@
 // Query Selectors
 var form = document.querySelector("form");
 var buttonLetsCook = document.querySelector(".lets-cook");
-var cookpot = document.querySelector(".cookpot-container");
+var randomMealDiv = document.querySelector(".cookpot-container");
 
 var radioSide = document.getElementById("side");
 var radioMainDish = document.getElementById("main-dish");
@@ -17,7 +17,7 @@ form.addEventListener('submit', makeMeal);
 // Form submit - click Let's Cook button
 function makeMeal() {
   event.preventDefault(); // stop page reload
-  hideImage(cookpot);
+  hideImage(randomMealDiv);
   // take input from form radio buttons and access relevant array
   checkRadiosAndSuggest(radioSide, sides);
   checkRadiosAndSuggest(radioMainDish, mains);
@@ -29,10 +29,15 @@ function makeMeal() {
 // and if so, generate the appropriate div on the right
 function checkRadiosAndSuggest(element, array) {
   if (element.checked) {
-    cookpot.innerHTML = `
+    randomMealDiv.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
-        <p>${array[randomIndex(array)]}!</p>
+        <div class="meal-container">
+          <p>${array[randomIndex(array)]}!</p>
+        </div>
+        <div class="clear-container">
+          <button class="clear">CLEAR</button>
+        </div>
       </div>
     `;
   }
@@ -40,10 +45,15 @@ function checkRadiosAndSuggest(element, array) {
 // Sketch out entire Meal
 function checkEntireMealAndSuggest(element, array1, array2, array3) {
   if (element.checked) {
-    cookpot.innerHTML = `
+    randomMealDiv.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
-        <p>${array2[randomIndex(array2)]} with a side of ${array1[randomIndex(array1)]} and ${array3[randomIndex(array3)]} for dessert!</p>
+        <div class="meal-container">
+          <p>${array2[randomIndex(array2)]} with a side of ${array1[randomIndex(array1)]} and ${array3[randomIndex(array3)]} for dessert!</p>
+        </div>
+        <div class="clear-container">
+          <button class="clear">CLEAR</button>
+        </div>
       </div>
     `;
   }
