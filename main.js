@@ -40,13 +40,13 @@ function makeMeal() {
 }
 // Check if a certain radio button is selected,
 // and if so, generate the appropriate div on the right
-function checkRadiosAndSuggest(element, array) {
-  if (element.checked) {
+function checkRadiosAndSuggest(mealElement, mealArray) {
+  if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
         <div class="meal-container">
-          <p>${array[randomIndex(array)]}!</p>
+          <p>${mealArray[randomIndex(mealArray)]}!</p>
         </div>
         <div class="clear-container">
           <button class="clear">CLEAR</button>
@@ -58,13 +58,13 @@ function checkRadiosAndSuggest(element, array) {
   }
 }
 // Sketch out entire Meal
-function checkEntireMealAndSuggest(element, array1, array2, array3) {
-  if (element.checked) {
+function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArray3) {
+  if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
         <div class="meal-container">
-          <p>${array2[randomIndex(array2)]} with a side of ${array1[randomIndex(array1)]} and ${array3[randomIndex(array3)]} for dessert!</p>
+          <p>${mealArray2[randomIndex(mealArray2)]} with a side of ${mealArray1[randomIndex(mealArray1)]} and ${mealArray3[randomIndex(mealArray3)]} for dessert!</p>
         </div>
         <div class="clear-container">
           <button class="clear">CLEAR</button>
