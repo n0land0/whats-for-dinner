@@ -12,21 +12,26 @@
   <body>
     <section class="box-container">
       <div class="meal-select">
-        <h2 class="looking-for">What are you looking for?<span class="asterisk">*</span></h2>
-        <ul>
-          <li><input class="meal-type-radio" type="radio"> Side</input></li>
-          <li><input class="meal-type-radio" type="radio"> Main Dish</input></li>
-          <li><input class="meal-type-radio" type="radio"> Dessert</input></li>
-          <li><input class="meal-type-radio" type="radio"> Entire Meal</input></li>
-        </ul>
-        <button class="lets-cook">LET'S COOK!</button>
+        <div class="form-container">
+          <h2 class="looking-for">What are you looking for?<span class="asterisk">*</span></h2>
+          <form>
+            <label for="side"><input id="side" type="radio" value="Side" name="meal">Side</label>
+            <label for="main-dish"><input id="main-dish" type="radio" value="Main Dish" name="meal">Main Dish</label>
+            <label for="dessert"><input id="dessert" type="radio" value="Dessert" name="meal">Dessert</label>
+            <label for="entire-meal"><input id="entire-meal" type="radio" value="Entire Meal" name="meal">Entire Meal</label>
+            <input type="submit" class="lets-cook" value="LET'S COOK!">
+          </form>
+        </div>
       </div>
       <div class="cookpot-container">
-        <!-- <img class="cookpot"src="/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg">
-      </div> -->
+        <!-- <div class="clear-container">
+          <button class="clear">CLEAR</button>
+        </div> -->
+      </div>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="data.js"></script>
   <footer>
   </footer>
 </html>

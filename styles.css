@@ -71,8 +71,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 3em 3em 3em 3em;
   /* padding-bottom: 34.25%; */
-  padding: 3em 3em 4em 3em;
 }
 
 /* meal select div */
@@ -82,16 +82,22 @@ body {
   flex-direction: column;
 }
 
+.form-container {
+  /* padding: 3em 3em 3em 3em; */
+}
+
 .looking-for {
   font-size: 2.1em;
+  margin-bottom: .4em;
 }
 
 .asterisk {
-  color: red;
+  color: rgb(239,82,84);
   vertical-align: super;
+  font-size: .8em;
 }
 
-ul {
+/* ul {
   list-style-type: none;
   padding: 0 0 0 .25em;
   align-items: flex-start;
@@ -100,23 +106,40 @@ ul {
 li {
   font-size: 1.4em;
   margin: 1em 0 1em 0;
+} */
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 .25em;
+  align-items: flex-start;
+  margin: auto;
 }
 
 input[type="radio"] {
   width: 1.5em;
   height: 1.5em;
+  margin-right: 1em;
 }
 
-.lets-cook {
+label {
+  font-size: 1.4em;
+  margin: .75rem 0 .75rem 0;
+}
+
+.lets-cook,
+.clear {
   background-color: #0fb9b1;
   border: none;
   border-radius: .35em;
   font-size: 1em;
   padding: 2.5% 13.25%;
+  margin-top: .5em;
 }
 
 /* cookpot div */
 .cookpot-container {
+  display: flex;
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
   50% 50% / 8.25em /* position / size */
   no-repeat /* repeat */
@@ -126,14 +149,68 @@ input[type="radio"] {
   rgba(225, 225, 225, .9)/* color */
   ;
   background-repeat: no-repeat;
+  /* padding: 1em 1em 1em 1em; */
 }
 
-.cookpot {
-  object-fit: none;
-  /* padding: 10em 10em 10em 10em; */
+.hide-background-image { /*hide cookpot*/
+  background-image: none;
 }
+
+/* Newly generated div */
+.random-meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 0 0 0;
+}
+
+.meal-container {
+  height: 4rem;
+}
+
+h3, p {
+  margin: 0 auto 0 auto;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-style: italic;
+  padding-bottom: 2rem;
+}
+
+p {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  /* padding: 1rem; */
+}
+
+.clear-container {
+  display: flex;
+  padding: 2.5% 0 0 13.25%;
+  justify-content: flex-end;
+  width: 25rem;
+}
+
+.clear {
+  background-color: #95A5A7;
+  color: white;
+  padding: 2.5% 4%;
+  margin-top: 4em;
+  height: 2.3rem;
+}
+
+/* .cookpot {
+  object-fit: none;
+  padding: 10em 10em 10em 10em;
+} */
 
 /* .cookpot {
   margin: auto;
   object-fit: none;
 } */
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
