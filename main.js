@@ -9,6 +9,8 @@ var radioMainDish = document.getElementById("main-dish");
 var radioDessert = document.getElementById("dessert");
 var radioEntireMeal = document.getElementById("entire-meal");
 
+var radiosAll = document.querySelectorAll('input[type="radio"]');
+
 // Event Listeners
   // buttonLetsCook.addEventListener('', makeMeal);
   // form.addEventListener('submit', testMe);
@@ -25,7 +27,11 @@ function clearMeal() {
 // Form submit - click Let's Cook button
 function makeMeal() {
   event.preventDefault(); // stop page reload
-  hideImage(randomMealDiv);
+  for (var i = 0; i < radiosAll.length; i++) {
+    if (radiosAll[i].checked) {
+      hideImage(randomMealDiv);
+    }
+  }
   // take input from form radio buttons and access relevant array
   checkRadiosAndSuggest(radioSide, sides);
   checkRadiosAndSuggest(radioMainDish, mains);

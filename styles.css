@@ -42,6 +42,9 @@ header {
 
 /* entire body */
 body {
+  display: flex;
+  flex-direction: column;
+  /* ^possibly unnecessary? */
   background:
     url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/burger-friends.jpg)
     0% 0% / cover /* position / size */
@@ -117,8 +120,8 @@ form {
 }
 
 input[type="radio"] {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1vw;
+  height: 1vw;
   margin-right: 1em;
 }
 
