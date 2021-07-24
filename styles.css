@@ -82,6 +82,10 @@ body {
   flex-direction: column;
 }
 
+.form-container {
+  /* padding: 3em 3em 3em 3em; */
+}
+
 .looking-for {
   font-size: 2.1em;
   margin-bottom: .4em;
@@ -135,6 +139,7 @@ label {
 
 /* cookpot div */
 .cookpot-container {
+  display: flex;
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
   50% 50% / 8.25em /* position / size */
   no-repeat /* repeat */
@@ -160,7 +165,7 @@ label {
 }
 
 .meal-container {
-  height: 5rem;
+  height: 4rem;
 }
 
 h3, p {
@@ -184,6 +189,7 @@ p {
   display: flex;
   padding: 2.5% 0 0 13.25%;
   justify-content: flex-end;
+  width: 25rem;
 }
 
 .clear {
@@ -191,6 +197,7 @@ p {
   color: white;
   padding: 2.5% 4%;
   margin-top: 4em;
+  height: 2.3rem;
 }
 
 /* .cookpot {
