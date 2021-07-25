@@ -1,5 +1,5 @@
 # Title
-Mod + Project Name
+What's for Dinner?
 
 ## Table of Contents
   - [Abstract](#abstract)
@@ -16,12 +16,9 @@ Mod + Project Name
 	Overview of project + goals
 
 ## Technologies
-  - Javascript
-  - eslint
-  - node
-  - Atom
-	- WebPack
-	- API 
+  - CSS
+  - JavaScript
+  - HTML
 
 ## Code Architecture
 
@@ -45,4 +42,4 @@ Use [https://gifcap.dev/](https://gifcap.dev/) to make GIFs
 	- Future Iterations
 
 ## Project Specs
-  - The project spec & rubric can be found [here](insert project spec sheet here)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html)
