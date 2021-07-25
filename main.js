@@ -1,5 +1,4 @@
 // Query Selectors
-var html = document.querySelector("html");
 var form = document.querySelector("form");
 var buttonLetsCook = document.querySelector(".lets-cook");
 var randomMealDiv = document.querySelector(".cookpot-container");
@@ -15,7 +14,7 @@ var radiosAll = document.querySelectorAll('input[type="radio"]');
 // Event Listeners
 // form.addEventListener('submit', makeMeal);
 form.addEventListener('submit', delayMeal);
-addRecipe.addEventListener('click', comic);
+// addRecipe.addEventListener('click', comic);
 
 // Event Handlers
 function clearMeal() {
@@ -57,6 +56,7 @@ function makeMeal() {
   checkRadiosAndSuggest(radioDessert, desserts);
   checkEntireMealAndSuggest(radioEntireMeal, sides, mains, desserts);
 }
+
 // Check if a certain radio button is selected,
 // and if so, generate the appropriate div on the right
 function checkRadiosAndSuggest(mealElement, mealArray) {
@@ -76,7 +76,7 @@ function checkRadiosAndSuggest(mealElement, mealArray) {
     buttonClear.addEventListener('click', clearMeal);
   }
 }
-// Sketch out entire Meal
+
 function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArray3) {
   if (mealElement.checked) {
     randomMealDiv.innerHTML = `
@@ -93,10 +93,6 @@ function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArra
     var buttonClear = document.querySelector(".clear");
     buttonClear.addEventListener('click', clearMeal);
   }
-}
-
-function comic() {
-  html.classList.toggle(".comic");
 }
 
 // Show/Hide fxns
