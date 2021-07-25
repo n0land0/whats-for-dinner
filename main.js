@@ -12,10 +12,8 @@ var radioEntireMeal = document.getElementById("entire-meal");
 var radiosAll = document.querySelectorAll('input[type="radio"]');
 
 // Event Listeners
-  // buttonLetsCook.addEventListener('', makeMeal);
-  // form.addEventListener('submit', testMe);
-form.addEventListener('submit', makeMeal);
-// buttonClear.addEventListener('click', clearMeal);
+// form.addEventListener('submit', makeMeal);
+form.addEventListener('submit', delayMeal);
 
 // Event Handlers
 function clearMeal() {
@@ -24,13 +22,29 @@ function clearMeal() {
   randomMealDiv.innerHTML = "";
 }
 // Form submit - click Let's Cook button
-function makeMeal() {
-  event.preventDefault(); // stop page reload
+// buttonLetsCook.onclick = setTimeout(makeMeal, 2000);
+
+function delayMeal() {
+  event.preventDefault();
   for (var i = 0; i < radiosAll.length; i++) {
     if (radiosAll[i].checked) {
       hideImage(randomMealDiv);
+      randomMealDiv.innerHTML = "";
+      showAnimation(randomMealDiv);
     }
   }
+  window.setTimeout(makeMeal, 3000);
+
+}
+
+function makeMeal() {
+  hideAnimation(randomMealDiv);
+  // event.preventDefault(); // stop page reload
+  // for (var i = 0; i < radiosAll.length; i++) {
+  //   if (radiosAll[i].checked) {
+  //     hideImage(randomMealDiv);
+  //   }
+  // }
   // take input from form radio buttons and access relevant array
   checkRadiosAndSuggest(radioSide, sides);
   checkRadiosAndSuggest(radioMainDish, mains);
@@ -76,20 +90,20 @@ function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArra
 }
 
 // Show/Hide fxns
-function show(element) {
-  element.classList.remove("hidden");
-}
-
-function hide(element) {
-  element.classList.add("hidden");
-}
-
 function hideImage(element) {
   element.classList.add("hide-background-image");
 }
 
 function showImage(element) {
   element.classList.remove("hide-background-image");
+}
+
+function showAnimation(element) {
+  element.classList.add("cook-animation");
+}
+
+function hideAnimation(element) {
+  element.classList.remove("cook-animation");
 }
 
 // Random Index Generator

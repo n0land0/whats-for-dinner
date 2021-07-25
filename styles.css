@@ -152,6 +152,29 @@ label:hover {
   background-image: none;
 }
 
+@keyframes cookerino {
+  0% {
+    /* transform: scale(0.5); */
+    background-position: 25% 50%;
+    filter: blur(.25em);
+  }
+  50% {
+    /* transform: scale(1.5); */
+    background-position: 75% 50%;
+    filter: invert(75%) blur(.25em);
+  }
+  100% {
+    /* transform: scale(0.5); */
+    background-position: 25% 50%;
+    filter: blur(.25em);
+  }
+}
+
+.cook-animation {
+  animation: cookerino 1s infinite;
+  background-image: url(https://imgr.search.brave.com/VCwuKeEb_iLPHe_a3hBFvlWxOjmlu5SGHDdN58zJAjM/fit/980/930/no/1/aHR0cHM6Ly9jZG4u/b25saW5ld2ViZm9u/dHMuY29tL3N2Zy9p/bWdfMjE2NjExLnBu/Zw);
+}
+
 /* Newly generated div */
 .random-meal {
   display: flex;
