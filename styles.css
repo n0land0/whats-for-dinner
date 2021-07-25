@@ -115,6 +115,14 @@ label {
   margin: .75rem 0 .75rem 0;
 }
 
+input[type="radio"]:hover,
+label:hover {
+  /* transition-property: all; */
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  transform: scale(1.1);
+}
+
 .lets-cook,
 .clear {
   background-color: #0fb9b1;
@@ -211,6 +219,7 @@ p {
 }
 
 .btn:hover {
+  /* transition-delay: .2s; */
   background-color: #DC976F;
   color: #2593D4;
   transform: scale(1.1);
@@ -221,19 +230,5 @@ p {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12)
-  ;
+;
 }
-
-.btn::before {
-
-}
-
-.btn::after {
-
-}
-
-.btn:hover::before {
-  border: 1px solid red;
-}
-
-.btn:hover::after {}
