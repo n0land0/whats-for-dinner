@@ -22,7 +22,6 @@ function clearMeal() {
   event.preventDefault();
   showImage(randomMealDiv);
   randomMealDiv.innerHTML = "";
-  console.log("click");
 }
 // Form submit - click Let's Cook button
 function makeMeal() {
@@ -49,7 +48,7 @@ function checkRadiosAndSuggest(mealElement, mealArray) {
           <p>${mealArray[randomIndex(mealArray)]}!</p>
         </div>
         <div class="clear-container">
-          <button class="clear">CLEAR</button>
+          <button class="clear btn">CLEAR</button>
         </div>
       </div>
     `;
@@ -67,7 +66,7 @@ function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArra
           <p>${mealArray2[randomIndex(mealArray2)]} with a side of ${mealArray1[randomIndex(mealArray1)]} and ${mealArray3[randomIndex(mealArray3)]} for dessert!</p>
         </div>
         <div class="clear-container">
-          <button class="clear">CLEAR</button>
+          <button class="clear btn">CLEAR</button>
         </div>
       </div>
     `;
