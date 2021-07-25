@@ -5,13 +5,7 @@ html {
 
 /* header */
 header {
-  font:
-  /* line-height: */ normal
-  /* font-weight: */ bold
-  /* font-stretch: */ normal
-  /* font-variant: */ normal
-  /* font-size:*/ .825em
-  /* font-family: */ 'Roboto', sans-serif;
+  font-size: .825em;
   background: #0fb9b1;
   padding: .25em 2em .25em 2.2em;
   display: flex;
@@ -254,4 +248,8 @@ p {
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12)
 ;
+}
+
+.comic {
+  font-family: "Comic Sans MS", sans-serif;
 }

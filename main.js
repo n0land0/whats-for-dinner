@@ -1,8 +1,9 @@
 // Query Selectors
+var html = document.querySelector("html");
 var form = document.querySelector("form");
 var buttonLetsCook = document.querySelector(".lets-cook");
 var randomMealDiv = document.querySelector(".cookpot-container");
-// var buttonClear = document.querySelector(".clear");
+var addRecipe = document.querySelector(".add-a-recipe");
 
 var radioSide = document.getElementById("side");
 var radioMainDish = document.getElementById("main-dish");
@@ -14,12 +15,18 @@ var radiosAll = document.querySelectorAll('input[type="radio"]');
 // Event Listeners
 // form.addEventListener('submit', makeMeal);
 form.addEventListener('submit', delayMeal);
+addRecipe.addEventListener('click', comic);
 
 // Event Handlers
 function clearMeal() {
   event.preventDefault();
   showImage(randomMealDiv);
   randomMealDiv.innerHTML = "";
+  for (var i = 0; i < radiosAll.length; i++) {
+    if (radiosAll[i].checked) {
+      radiosAll[i].checked = false;
+    }
+  }
 }
 // Form submit - click Let's Cook button
 // buttonLetsCook.onclick = setTimeout(makeMeal, 2000);
@@ -31,10 +38,9 @@ function delayMeal() {
       hideImage(randomMealDiv);
       randomMealDiv.innerHTML = "";
       showAnimation(randomMealDiv);
+      window.setTimeout(makeMeal, 3000);
     }
   }
-  window.setTimeout(makeMeal, 3000);
-
 }
 
 function makeMeal() {
@@ -87,6 +93,10 @@ function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArra
     var buttonClear = document.querySelector(".clear");
     buttonClear.addEventListener('click', clearMeal);
   }
+}
+
+function comic() {
+  html.classList.toggle(".comic");
 }
 
 // Show/Hide fxns
