@@ -13,14 +13,21 @@ header {
   align-items: center;
 }
 
-.add-a-recipe-container {
-}
-
 .add-a-recipe {
   border: none;
   border-radius: .4em;
   font-size: 1.3em;
   padding: .65em .7em;
+  /* width: 9rem;
+  height: 2.6rem; */
+}
+
+.add-a-recipe:hover .add {
+  display: none;
+}
+
+.add-a-recipe:hover .coming-soon {
+  display: block;
 }
 
 /* entire body */
@@ -62,6 +69,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  height: 21.1rem;
 }
 
 .form-container {
@@ -239,4 +247,27 @@ label:hover {
 
 .comic {
   font-family: "Comic Sans MS", sans-serif;
+}
+
+@keyframes fadein {
+  0% {opacity: 0;}
+  100% {opacity: 100%;}
+}
+
+.doge {
+  animation: fadein 3s;
+  width: 100%;
+  height: 100%;
+  background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/corgi-meme-king-1.jpeg) 0% 40% / cover no-repeat;
+}
+
+.doge2 {
+  animation: fadein 3s;
+  width: 100%;
+  height: 100%;
+  background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/smily.jpeg) 20% 0% / cover no-repeat;
+}
+
+.easter-egg {
+  animation: fadein 3s;
 }

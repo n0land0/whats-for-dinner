@@ -11,10 +11,11 @@ var radioEntireMeal = document.getElementById("entire-meal");
 
 var radiosAll = document.querySelectorAll('input[type="radio"]');
 
+// var audio = document.querySelector("audio");
 // Event Listeners
 // form.addEventListener('submit', makeMeal);
 form.addEventListener('submit', delayMeal);
-// addRecipe.addEventListener('click', comic);
+// addRecipe.addEventListener('click', playTune);
 
 // Event Handlers
 function clearMeal() {
@@ -26,6 +27,7 @@ function clearMeal() {
       radiosAll[i].checked = false;
     }
   }
+  buttonLetsCook.disabled = false;
 }
 // Form submit - click Let's Cook button
 // buttonLetsCook.onclick = setTimeout(makeMeal, 2000);
@@ -55,6 +57,7 @@ function makeMeal() {
   checkRadiosAndSuggest(radioMainDish, mains);
   checkRadiosAndSuggest(radioDessert, desserts);
   checkEntireMealAndSuggest(radioEntireMeal, sides, mains, desserts);
+  buttonLetsCook.disabled = true;
 }
 
 // Check if a certain radio button is selected,
@@ -63,9 +66,9 @@ function checkRadiosAndSuggest(mealElement, mealArray) {
   if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
-        <h3>You should make:</h3>
+        <h3 class="you-should-make">You should make:</h3>
         <div class="meal-container">
-          <p>${mealArray[randomIndex(mealArray)]}!</p>
+          <p class="this-meal">${mealArray[randomIndex(mealArray)]}!</p>
         </div>
         <div class="clear-container">
           <button class="clear btn">CLEAR</button>
