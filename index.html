@@ -3,17 +3,14 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <!-- <header>
-    <h1>What's for Dinner?</h1>
-    <div class="add-a-recipe-container">
-      <button class="add-a-recipe">ADD A RECIPE</button>
-    </div>
-  </header> -->
   <body>
     <header>
-      <h1>What's for Dinner?</h1>
+      <h1 class="whats-for-dinner">What's for Dinner?</h1>
       <div class="add-a-recipe-container">
-        <button class="add-a-recipe btn">ADD A RECIPE</button>
+        <button class="add-a-recipe btn">
+          <span class="add">ADD A RECIPE</span>
+          <span class="please-dont hidden">PLEASE DON'T</span>
+        </button>
       </div>
     </header>
     <section class="box-container">
@@ -30,14 +27,13 @@
         </div>
       </div>
       <div class="cookpot-container">
-        <!-- <div class="clear-container">
-          <button class="clear">CLEAR</button>
-        </div> -->
       </div>
     </section>
+    <audio type="audio/mpeg" autoplay></audio>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="fun.js"></script>
   </body>
-  <script type="text/javascript" src="main.js"></script>
-  <script type="text/javascript" src="data.js"></script>
   <footer>
   </footer>
 </html>

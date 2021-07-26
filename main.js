@@ -2,7 +2,6 @@
 var form = document.querySelector("form");
 var buttonLetsCook = document.querySelector(".lets-cook");
 var randomMealDiv = document.querySelector(".cookpot-container");
-var addRecipe = document.querySelector(".add-a-recipe");
 
 var radioSide = document.getElementById("side");
 var radioMainDish = document.getElementById("main-dish");
@@ -12,11 +11,9 @@ var radioEntireMeal = document.getElementById("entire-meal");
 var radiosAll = document.querySelectorAll('input[type="radio"]');
 
 // Event Listeners
-// form.addEventListener('submit', makeMeal);
 form.addEventListener('submit', delayMeal);
-// addRecipe.addEventListener('click', comic);
 
-// Event Handlers
+// Clear button
 function clearMeal() {
   event.preventDefault();
   showImage(randomMealDiv);
@@ -26,10 +23,9 @@ function clearMeal() {
       radiosAll[i].checked = false;
     }
   }
+  buttonLetsCook.disabled = false;
 }
-// Form submit - click Let's Cook button
-// buttonLetsCook.onclick = setTimeout(makeMeal, 2000);
-
+// Form submit - Let's Cook button
 function delayMeal() {
   event.preventDefault();
   for (var i = 0; i < radiosAll.length; i++) {
@@ -38,19 +34,13 @@ function delayMeal() {
       randomMealDiv.innerHTML = "";
       showAnimation(randomMealDiv);
       window.setTimeout(makeMeal, 3000);
+      buttonLetsCook.disabled = true;
     }
   }
 }
 
 function makeMeal() {
   hideAnimation(randomMealDiv);
-  // event.preventDefault(); // stop page reload
-  // for (var i = 0; i < radiosAll.length; i++) {
-  //   if (radiosAll[i].checked) {
-  //     hideImage(randomMealDiv);
-  //   }
-  // }
-  // take input from form radio buttons and access relevant array
   checkRadiosAndSuggest(radioSide, sides);
   checkRadiosAndSuggest(radioMainDish, mains);
   checkRadiosAndSuggest(radioDessert, desserts);
@@ -59,13 +49,14 @@ function makeMeal() {
 
 // Check if a certain radio button is selected,
 // and if so, generate the appropriate div on the right
+  // side/main/dessert
 function checkRadiosAndSuggest(mealElement, mealArray) {
   if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
-        <h3>You should make:</h3>
+        <h3 class="you-should-make">You should make:</h3>
         <div class="meal-container">
-          <p>${mealArray[randomIndex(mealArray)]}!</p>
+          <p class="this-meal">${mealArray[randomIndex(mealArray)]}!</p>
         </div>
         <div class="clear-container">
           <button class="clear btn">CLEAR</button>
@@ -76,14 +67,14 @@ function checkRadiosAndSuggest(mealElement, mealArray) {
     buttonClear.addEventListener('click', clearMeal);
   }
 }
-
+  // entire meal
 function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArray3) {
   if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
-        <h3>You should make:</h3>
+        <h3 class="you-should-make">You should make:</h3>
         <div class="meal-container">
-          <p>${mealArray2[randomIndex(mealArray2)]} with a side of ${mealArray1[randomIndex(mealArray1)]} and ${mealArray3[randomIndex(mealArray3)]} for dessert!</p>
+          <p class="this-meal">${mealArray2[randomIndex(mealArray2)]} with a side of ${mealArray1[randomIndex(mealArray1)]} and ${mealArray3[randomIndex(mealArray3)]} for dessert!</p>
         </div>
         <div class="clear-container">
           <button class="clear btn">CLEAR</button>
@@ -115,18 +106,4 @@ function hideAnimation(element) {
 // Random Index Generator
 function randomIndex(array) {
   return Math.floor(Math.random() * array.length);
-}
-
-// Sketch event handler for radio >>> array return
-// if this radio button is checked, return a random element from this array
-
-// Sketch Conditionals
-// if (radioSide.checked) {
-//   console.log("checked");
-// }
-
-// Test function
-function testMe(event) {
-  event.preventDefault();
-  console.log("YOU\'RE DOING GREAT!");
 }
