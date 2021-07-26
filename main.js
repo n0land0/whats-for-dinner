@@ -2,7 +2,6 @@
 var form = document.querySelector("form");
 var buttonLetsCook = document.querySelector(".lets-cook");
 var randomMealDiv = document.querySelector(".cookpot-container");
-var addRecipe = document.querySelector(".add-a-recipe");
 
 var radioSide = document.getElementById("side");
 var radioMainDish = document.getElementById("main-dish");

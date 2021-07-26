@@ -1,9 +1,16 @@
 var mealSelect = document.querySelector(".meal-select");
 var audio = document.querySelector("audio");
+var whatsForDinner = document.querySelector(".whats-for-dinner");
+var addRecipe = document.querySelector(".add-a-recipe");
+var add = document.querySelector("add");
+var pleaseDont = document.querySelector("please-dont");
+
 
 addRecipe.addEventListener('click', corgify);
 
 function corgify() {
+  whatsForDinner.innerText = "Heckin\' Pupperinos";
+  // addRecipe.innerText = "MAKE IT STOP";
   audio.src = "/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/angel_edit.mp3";
   randomMealDiv.innerHTML = `
     <div class="doge"></div>
@@ -17,6 +24,7 @@ function corgify() {
 
 function abort() {
   addRecipe.removeEventListener('click', abort);
+  whatsForDinner.innerText = "What\'s for Dinner?";
   document.body.style.background = "url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/burger-friends.jpg) 0% 0% / cover no-repeat";
   mealSelect.innerHTML = `
   <div class="form-container">

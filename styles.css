@@ -24,7 +24,7 @@ header {
   display: none;
 }
 
-.add-a-recipe:hover .coming-soon {
+.add-a-recipe:hover .please-dont {
   display: block;
 }
 
@@ -123,7 +123,7 @@ label:hover {
   ;
 }
 
-.hide-background-image { 
+.hide-background-image {
   background-image: none;
 }
 
