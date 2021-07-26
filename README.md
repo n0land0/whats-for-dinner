@@ -4,7 +4,6 @@ What's for Dinner?
 ## Table of Contents
   - [Abstract](#abstract)
   - [Technologies](#technologies)
-  - [Code Architecture](#code-architecture)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
@@ -42,6 +41,7 @@ What's for Dinner?
   - Consulted with an alum and learned a lot about best practices and workflow in CSS - will be sure to implement these in future stylesheets to make organization much cleaner
   - Couldn't get some global rules to respond to a button - will have to look into possible causes for that
   - Still don't feel super comfortable with event targeting, although I figured it out in the limited scope of this project
+  - Would've like to refactor random meal container to update DOM with class + query selector instead of innerHTML
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html)
