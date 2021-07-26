@@ -10,7 +10,7 @@ addRecipe.addEventListener('click', corgify);
 
 function corgify() {
   whatsForDinner.innerText = "Heckin\' Pupperinos";
-  // addRecipe.innerText = "MAKE IT STOP";
+  addRecipe.innerText = "MAKE IT STOP";
   audio.src = "/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/angel_edit.mp3";
   randomMealDiv.innerHTML = `
     <div class="doge"></div>
@@ -25,6 +25,10 @@ function corgify() {
 function abort() {
   addRecipe.removeEventListener('click', abort);
   whatsForDinner.innerText = "What\'s for Dinner?";
+  addRecipe.innerHTML = `
+    <span class="add">ADD A RECIPE</span>
+    <span class="please-dont hidden">PLEASE DON'T</span>
+    `;
   document.body.style.background = "url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/burger-friends.jpg) 0% 0% / cover no-repeat";
   mealSelect.innerHTML = `
   <div class="form-container">
