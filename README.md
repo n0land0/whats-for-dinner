@@ -8,8 +8,8 @@ What's for Dinner?
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
-	- [Wins](#wins)
-	- [Challenges + Improvements](#challenges-+-Improvements)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
   - [Project Specs](#project-specs)
 
 ## Abstract
@@ -26,7 +26,7 @@ I built this app as a resource for the perpetually hungry & terminally indecisiv
 ![](giphy.gif)
 
 ## Install + Setup
-	- Install instructions, how to access the website and how to use the website
+Clone this repository to your local machine and open the index.html file in your browser.
 
 ## Contributors
   - [Nolan Caine](https://github.com/n0land0)
