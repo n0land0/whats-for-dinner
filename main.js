@@ -42,6 +42,7 @@ function delayMeal() {
       window.setTimeout(makeMeal, 3000);
     }
   }
+  buttonLetsCook.disabled = true;
 }
 
 function makeMeal() {
@@ -57,7 +58,7 @@ function makeMeal() {
   checkRadiosAndSuggest(radioMainDish, mains);
   checkRadiosAndSuggest(radioDessert, desserts);
   checkEntireMealAndSuggest(radioEntireMeal, sides, mains, desserts);
-  buttonLetsCook.disabled = true;
+  // buttonLetsCook.disabled = true;
 }
 
 // Check if a certain radio button is selected,
