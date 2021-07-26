@@ -1,5 +1,5 @@
 # Title
-Mod + Project Name
+What's for Dinner?
 
 ## Table of Contents
   - [Abstract](#abstract)
@@ -8,41 +8,40 @@ Mod + Project Name
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
-	- [Wins](#wins)
-	- [Challenges + Improvements](#challenges-+-Improvements)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
   - [Project Specs](#project-specs)
 
 ## Abstract
-	Overview of project + goals
+  - I built this app as a resource for the perpetually hungry & terminally indecisive, and as a sandbox for my learning in front-end technologies (especially CSS).
 
 ## Technologies
-  - Javascript
-  - eslint
-  - node
-  - Atom
-	- WebPack
-	- API 
-
-## Code Architecture
+  - CSS
+  - JavaScript
+  - HTML
 
 ## Illustrations
-
-Use [https://gifcap.dev/](https://gifcap.dev/) to make GIFs
+![](giphy.gif)
 
 ## Install + Setup
-	- Install instructions, how to access the website and how to use the website
+  - Clone this repository to your local machine and open the index.html file in your browser.
 
 ## Contributors
   - [Nolan Caine](https://github.com/n0land0)
 
 ## Wins
-	- What went well!
-	- Successes
+  - Logged a lot of time exploring CSS, most of which was completely new to me
+  - Gained a much better understanding of flexbox
+  - Learned how animations in CSS work
+  - Learned about timeouts in JS
+  - Succesfully used querySelectorAll after not understanding it very well in the pertinent lesson
+  - Learned about forms in HTML and different input types
 
 ## Challenges + Improvements
-	- What was difficult & how you would like to improve on code/project
-	- Any Bugs
-	- Future Iterations
+  - Would've liked to get to other page functionality in JS (localStorage, logins) while I was caught up in getting comfortable in CSS
+  - Consulted with an alum and learned a lot about best practices and workflow in CSS - will be sure to implement these in future stylesheets to make organization much cleaner
+  - Couldn't get some global rules to respond to a button - will have to look into possible causes for that
+  - Still don't feel super comfortable with event targeting, although I figured it out in the limited scope of this project
 
 ## Project Specs
-  - The project spec & rubric can be found [here](insert project spec sheet here)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html)
