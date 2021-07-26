@@ -81,9 +81,9 @@ function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArra
   if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
-        <h3>You should make:</h3>
+        <h3 class="you-should-make">You should make:</h3>
         <div class="meal-container">
-          <p>${mealArray2[randomIndex(mealArray2)]} with a side of ${mealArray1[randomIndex(mealArray1)]} and ${mealArray3[randomIndex(mealArray3)]} for dessert!</p>
+          <p class="this-meal">${mealArray2[randomIndex(mealArray2)]} with a side of ${mealArray1[randomIndex(mealArray1)]} and ${mealArray3[randomIndex(mealArray3)]} for dessert!</p>
         </div>
         <div class="clear-container">
           <button class="clear btn">CLEAR</button>
