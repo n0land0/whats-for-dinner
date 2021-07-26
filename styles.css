@@ -18,8 +18,6 @@ header {
   border-radius: .4em;
   font-size: 1.3em;
   padding: .65em .7em;
-  /* width: 9rem;
-  height: 2.6rem; */
 }
 
 .add-a-recipe:hover .add {
@@ -34,12 +32,10 @@ header {
 body {
   display: flex;
   flex-direction: column;
-  /* ^possibly unnecessary? */
   background:
     url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/burger-friends.jpg)
     0% 0% / cover
-    no-repeat
-    ;
+    no-repeat;
   margin: auto;
   height: 100%;
   font-family: 'Roboto', sans-serif;
@@ -54,14 +50,12 @@ body {
 /* both divs */
 .meal-select,
 .cookpot-container {
-  /* display: flex; */
   background: rgba(225, 225, 225, .9);
   width: 35%;
   justify-content: center;
   align-items: center;
   position: relative;
   padding: 3em 3em 3em 3em;
-  /* padding-bottom: 34.25%; */
 }
 
 /* meal select div */
@@ -70,10 +64,6 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 21.1rem;
-}
-
-.form-container {
-  /* padding: 3em 3em 3em 3em; */
 }
 
 .looking-for {
@@ -108,7 +98,6 @@ label {
 
 input[type="radio"]:hover,
 label:hover {
-  /* transition-property: all; */
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
   transform: scale(1.1);
@@ -128,34 +117,26 @@ label:hover {
 .cookpot-container {
   display: flex;
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/cookpot.svg)
-  50% 50% / 8.25em /* position / size */
-  no-repeat /* repeat */
-  local /* attachment */
-  border-box /* origin */
-  border-box /* clip */
-  rgba(225, 225, 225, .9)/* color */
+  50% 50% / 8.25em
+  no-repeat
+  rgba(225, 225, 225, .9)
   ;
-  background-repeat: no-repeat;
-  /* padding: 1em 1em 1em 1em; */
 }
 
-.hide-background-image { /*hide cookpot*/
+.hide-background-image { 
   background-image: none;
 }
 
 @keyframes cookerino {
   0% {
-    /* transform: scale(0.5); */
     background-position: 25% 50%;
     filter: blur(.25em);
   }
   50% {
-    /* transform: scale(1.5); */
     background-position: 75% 50%;
     filter: invert(75%) blur(.25em);
   }
   100% {
-    /* transform: scale(0.5); */
     background-position: 25% 50%;
     filter: blur(.25em);
   }
@@ -231,7 +212,6 @@ label:hover {
 }
 
 .btn:hover {
-  /* transition-delay: .2s; */
   background-color: #DC976F;
   color: #2593D4;
   transform: scale(1.1);
@@ -241,12 +221,7 @@ label:hover {
     0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12)
-;
-}
-
-.comic {
-  font-family: "Comic Sans MS", sans-serif;
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 @keyframes fadein {
@@ -266,8 +241,4 @@ label:hover {
   width: 100%;
   height: 100%;
   background: url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/smily.jpeg) 20% 0% / cover no-repeat;
-}
-
-.easter-egg {
-  animation: fadein 3s;
 }

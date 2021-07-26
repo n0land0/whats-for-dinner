@@ -14,7 +14,7 @@ var radiosAll = document.querySelectorAll('input[type="radio"]');
 // Event Listeners
 form.addEventListener('submit', delayMeal);
 
-// Event Handlers
+// Clear button
 function clearMeal() {
   event.preventDefault();
   showImage(randomMealDiv);
@@ -26,7 +26,7 @@ function clearMeal() {
   }
   buttonLetsCook.disabled = false;
 }
-// Form submit - click Let's Cook button
+// Form submit - Let's Cook button
 function delayMeal() {
   event.preventDefault();
   for (var i = 0; i < radiosAll.length; i++) {

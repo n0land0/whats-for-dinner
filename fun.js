@@ -30,7 +30,6 @@ function abort() {
     </form>
   </div>
   `;
-  // form.addEventListener('submit', delayMeal);
   randomMealDiv.innerHTML = "";
   audio.src = "";
 }
