@@ -24,7 +24,7 @@ I built this app as a resource for for the perpetually hungry & terminally indec
 
 ## Illustrations
 
-Use [https://gifcap.dev/](https://gifcap.dev/) to make GIFs
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/fCz80sFcyk8K8omhcw" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/fCz80sFcyk8K8omhcw">via GIPHY</a></p>
 
 ## Install + Setup
 	- Install instructions, how to access the website and how to use the website
