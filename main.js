@@ -40,9 +40,9 @@ function delayMeal() {
       randomMealDiv.innerHTML = "";
       showAnimation(randomMealDiv);
       window.setTimeout(makeMeal, 3000);
+      buttonLetsCook.disabled = true;
     }
   }
-  buttonLetsCook.disabled = true;
 }
 
 function makeMeal() {
