@@ -16,7 +16,7 @@ function corgify() {
 }
 
 function abort() {
-  addRecipe.addEventListener('click', corgify);
+  addRecipe.removeEventListener('click', abort);
   document.body.style.background = "url(/Users/nolancaine/turing/m1/projects/whats-for-dinner/assets/burger-friends.jpg) 0% 0% / cover no-repeat";
   mealSelect.innerHTML = `
   <div class="form-container">
