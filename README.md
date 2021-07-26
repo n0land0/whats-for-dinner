@@ -13,7 +13,7 @@ What's for Dinner?
   - [Project Specs](#project-specs)
 
 ## Abstract
-	Overview of project + goals
+I built this app as a resource for for the perpetually hungry & terminally indecisive, and as a sandbox for my learning in front-end technologies (especially CSS).
 
 ## Technologies
   - CSS
