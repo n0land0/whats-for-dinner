@@ -38,7 +38,7 @@ What's for Dinner?
   - Learned about forms in HTML and different input types
 
 ## Challenges + Improvements
-  - Would've liked to get to other page functionality in JS, while I was caught up in getting comfortable in CSS
+  - Would've liked to get to other page functionality in JS (localStorage, logins) while I was caught up in getting comfortable in CSS
   - Consulted with an alum and learned a lot about best practices and workflow in CSS - will be sure to implement these in future stylesheets to make organization much cleaner
   - Couldn't get some global rules to respond to a button - will have to look into possible causes for that
   - Still don't feel super comfortable with event targeting, although I figured it out in the limited scope of this project
