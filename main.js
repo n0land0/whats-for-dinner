@@ -2,48 +2,73 @@
 var form = document.querySelector("form");
 var buttonLetsCook = document.querySelector(".lets-cook");
 var randomMealDiv = document.querySelector(".cookpot-container");
-// var buttonClear = document.querySelector(".clear");
+var addRecipe = document.querySelector(".add-a-recipe");
 
 var radioSide = document.getElementById("side");
 var radioMainDish = document.getElementById("main-dish");
 var radioDessert = document.getElementById("dessert");
 var radioEntireMeal = document.getElementById("entire-meal");
 
+var radiosAll = document.querySelectorAll('input[type="radio"]');
+
 // Event Listeners
-  // buttonLetsCook.addEventListener('', makeMeal);
-  // form.addEventListener('submit', testMe);
-form.addEventListener('submit', makeMeal);
-// buttonClear.addEventListener('click', clearMeal);
+// form.addEventListener('submit', makeMeal);
+form.addEventListener('submit', delayMeal);
+// addRecipe.addEventListener('click', comic);
 
 // Event Handlers
 function clearMeal() {
   event.preventDefault();
   showImage(randomMealDiv);
   randomMealDiv.innerHTML = "";
-  console.log("click");
+  for (var i = 0; i < radiosAll.length; i++) {
+    if (radiosAll[i].checked) {
+      radiosAll[i].checked = false;
+    }
+  }
 }
 // Form submit - click Let's Cook button
+// buttonLetsCook.onclick = setTimeout(makeMeal, 2000);
+
+function delayMeal() {
+  event.preventDefault();
+  for (var i = 0; i < radiosAll.length; i++) {
+    if (radiosAll[i].checked) {
+      hideImage(randomMealDiv);
+      randomMealDiv.innerHTML = "";
+      showAnimation(randomMealDiv);
+      window.setTimeout(makeMeal, 3000);
+    }
+  }
+}
+
 function makeMeal() {
-  event.preventDefault(); // stop page reload
-  hideImage(randomMealDiv);
+  hideAnimation(randomMealDiv);
+  // event.preventDefault(); // stop page reload
+  // for (var i = 0; i < radiosAll.length; i++) {
+  //   if (radiosAll[i].checked) {
+  //     hideImage(randomMealDiv);
+  //   }
+  // }
   // take input from form radio buttons and access relevant array
   checkRadiosAndSuggest(radioSide, sides);
   checkRadiosAndSuggest(radioMainDish, mains);
   checkRadiosAndSuggest(radioDessert, desserts);
   checkEntireMealAndSuggest(radioEntireMeal, sides, mains, desserts);
 }
+
 // Check if a certain radio button is selected,
 // and if so, generate the appropriate div on the right
-function checkRadiosAndSuggest(element, array) {
-  if (element.checked) {
+function checkRadiosAndSuggest(mealElement, mealArray) {
+  if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
         <div class="meal-container">
-          <p>${array[randomIndex(array)]}!</p>
+          <p>${mealArray[randomIndex(mealArray)]}!</p>
         </div>
         <div class="clear-container">
-          <button class="clear">CLEAR</button>
+          <button class="clear btn">CLEAR</button>
         </div>
       </div>
     `;
@@ -51,17 +76,17 @@ function checkRadiosAndSuggest(element, array) {
     buttonClear.addEventListener('click', clearMeal);
   }
 }
-// Sketch out entire Meal
-function checkEntireMealAndSuggest(element, array1, array2, array3) {
-  if (element.checked) {
+
+function checkEntireMealAndSuggest(mealElement, mealArray1, mealArray2, mealArray3) {
+  if (mealElement.checked) {
     randomMealDiv.innerHTML = `
       <div class="random-meal">
         <h3>You should make:</h3>
         <div class="meal-container">
-          <p>${array2[randomIndex(array2)]} with a side of ${array1[randomIndex(array1)]} and ${array3[randomIndex(array3)]} for dessert!</p>
+          <p>${mealArray2[randomIndex(mealArray2)]} with a side of ${mealArray1[randomIndex(mealArray1)]} and ${mealArray3[randomIndex(mealArray3)]} for dessert!</p>
         </div>
         <div class="clear-container">
-          <button class="clear">CLEAR</button>
+          <button class="clear btn">CLEAR</button>
         </div>
       </div>
     `;
@@ -71,20 +96,20 @@ function checkEntireMealAndSuggest(element, array1, array2, array3) {
 }
 
 // Show/Hide fxns
-function show(element) {
-  element.classList.remove("hidden");
-}
-
-function hide(element) {
-  element.classList.add("hidden");
-}
-
 function hideImage(element) {
   element.classList.add("hide-background-image");
 }
 
 function showImage(element) {
   element.classList.remove("hide-background-image");
+}
+
+function showAnimation(element) {
+  element.classList.add("cook-animation");
+}
+
+function hideAnimation(element) {
+  element.classList.remove("cook-animation");
 }
 
 // Random Index Generator
